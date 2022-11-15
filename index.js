@@ -86,6 +86,7 @@ async function generatePdfs(files, options, callback) {
     if(file.content) {
       data = await inlineCss(file.content, {
         url:"/", 
+        removeStyleTags: false,
         extraCss:`
           @page {
             margin: 0;
@@ -96,14 +97,6 @@ async function generatePdfs(files, options, callback) {
           }
           body {
             margin: 0;
-            color: white;
-          //   position: absolute;
-          //   z-index: 9999;
-          //   top: 0;
-          //   background-image: url('https://bumping-files.s3.ap-east-1.amazonaws.com/uploads/59tytdtbrasdo2slf2m80-Bump-bump-imageimage.JPEG'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-          //   background-size:  0 0/100% 100vh;
-          //   background-repeat: repeat;
-          //   background-position: fixed; 
           }
           #bodydiv {
             margin: 0;
