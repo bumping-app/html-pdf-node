@@ -107,10 +107,26 @@ async function generatePdfs(files, options, callback) {
             padding-top: 0px;
             padding-bottom: 0px;
           }
-          img {
-            border-radius: 15px;
+          .pbVidThumb {
+            margin-top: 30px;
+            border-radius: 0px;
+            border-width: 1px;
+            border-color: rgba(255,255,255,0.8);
+            object-fit: cover;
             width: 100%;
             height: auto;
+            max-height: 500px;
+            break-inside: avoid;
+          }
+          .imgLarge {
+            margin-top: 30px;
+            border-radius: 0px;
+            border-width: 1px;
+            border-color: rgba(255,255,255,0.8);
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            break-inside: avoid;
           }
           .pline {
             display: inline;
@@ -118,7 +134,7 @@ async function generatePdfs(files, options, callback) {
           .headerbox {
             background-color: rgba(0,0,0,.5);
             color: #fff;
-            border-radius: 15px;
+            border-radius: 0px;
             margin-left: 25px;
             padding-left: 25px;
             margin-right: 25px;
