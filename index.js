@@ -97,6 +97,7 @@ async function generatePdfs(files, options, callback) {
           }
           body {
             margin: 0;
+            font-size: 12px;
           }
           #bodydiv {
             margin: 0;
@@ -107,15 +108,29 @@ async function generatePdfs(files, options, callback) {
             padding-top: 0px;
             padding-bottom: 0px;
           }
+          h1 {
+            display: inline-block;
+            padding-bottom: 0px;
+            margin-bottom:0px;
+          }
+          p {
+            display: inline-block;
+            padding-bottom: 0px;
+            margin-bottom:0px;
+          }
           .pbVidThumb {
+            display: inline-block;
             margin-top: 30px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px;
             border-radius: 0px;
             border-width: 1px;
             border-color: rgba(255,255,255,0.8);
             object-fit: cover;
-            width: 100%;
+            width: 80%;
             height: auto;
-            max-height: 500px;
+            max-height: 250px;
             break-inside: avoid;
           }
           .imgLarge {
@@ -126,6 +141,21 @@ async function generatePdfs(files, options, callback) {
             object-fit: cover;
             width: 100%;
             height: auto;
+            break-inside: avoid;
+          }
+          img:not(.pbVidThumb, .imgLarge) {
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-radius: 0px;
+            border-width: 1px;
+            border-color: rgba(255,255,255,0.8);
+            object-fit: cover;
+            width: 80%;
+            height: auto;
+            max-height: 250px;
             break-inside: avoid;
           }
           .pline {
